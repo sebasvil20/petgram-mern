@@ -6,7 +6,7 @@ import { ApolloProvider } from "react-apollo";
 import Context from "./Context";
 
 const client = new ApolloClient({
-  uri: "https://petgram-server-hinval-pnrlxuyvo-sebasvil20.vercel.app/graphql",
+  uri: "https://petgram-server-hinval.vercel.app/graphql",
 });
 
 ReactDOM.render(
