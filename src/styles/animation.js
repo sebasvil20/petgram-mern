@@ -20,6 +20,15 @@ const slideInKeyFrames = keyframes`
     }
 `
 
+const slideInKeyFramesNoScale = keyframes`
+    from {
+        margin-top: -200px;
+    }
+    to {
+        margin-top: 0px;
+    }
+`
+
 const slideIn2KeyFrames = keyframes`
     from {
         transform: translate3d(0, 100px, 0) scale(.5);
@@ -27,6 +36,10 @@ const slideIn2KeyFrames = keyframes`
     to {
         transform: translate3d(0, 10, 0) scale(.5);
     }
+`
+
+export const slideInNoScale = ({ time = '1s', type = 'ease' } = {}) => css`
+animation: ${time} ${slideInKeyFramesNoScale} ${type} forwards;
 `
 
 export const slideIn2 = ({ time = '1s', type = 'ease' } = {}) => css`

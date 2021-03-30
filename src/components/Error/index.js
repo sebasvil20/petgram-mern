@@ -1,6 +1,9 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { ErrorDiv } from './styles'
+import { MdErrorOutline } from "react-icons/md";
 
-export const Error = ({ msg }) => (
-  <ErrorDiv>{msg}</ErrorDiv>
-)
+export const Error = ({ msg }) => {
+  return(  
+    <ErrorDiv><MdErrorOutline/> {msg}</ErrorDiv>
+  )
+}
