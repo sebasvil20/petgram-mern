@@ -1,5 +1,5 @@
-import React from "react";
-import { Grid, Image, Link } from "./styles";
+import React from 'react'
+import { Grid, Image, Link } from './styles'
 
 export const ListOfFavs = ({ favs = [] }) => {
   return (
@@ -10,5 +10,5 @@ export const ListOfFavs = ({ favs = [] }) => {
         </Link>
       ))}
     </Grid>
-  );
-};
+  )
+}

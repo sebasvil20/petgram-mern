@@ -1,6 +1,6 @@
 import React from 'react'
-import {Mutation} from 'react-apollo'
-import {gql} from 'apollo-boost'
+import { Mutation } from 'react-apollo'
+import { gql } from 'apollo-boost'
 
 const LOGIN = gql`
     mutation login($input: UserCredentials!){
@@ -8,8 +8,10 @@ const LOGIN = gql`
     }
 `
 
-export const LoginMutation = ({children}) => {
-    return <Mutation mutation = {LOGIN}>
-        {children}
+export const LoginMutation = ({ children }) => {
+  return (
+    <Mutation mutation={LOGIN}>
+      {children}
     </Mutation>
+  )
 }

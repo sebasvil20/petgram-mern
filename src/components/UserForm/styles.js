@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const Input = styled.input`
   border: 1px solid #ccc;
@@ -10,11 +10,11 @@ export const Input = styled.input`
   &[disabled]{
     opacity: .3;
   }
-`;
+`
 
 export const Form = styled.form`
   padding: 16px 10px;
-`;
+`
 
 export const Title = styled.h2`
     font-size: 26px;
@@ -34,7 +34,7 @@ export const Button = styled.button`
   &[disabled]{
     opacity: .3;
   }
-`;
+`
 
 export const Error = styled.span`
   color: red;

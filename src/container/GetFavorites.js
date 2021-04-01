@@ -1,8 +1,8 @@
-import React from "react";
-import { Query } from "react-apollo";
-import { gql } from "apollo-boost";
-import { ListOfFavs } from "../components/ListOfFavs";
-import { Loader } from "../components/Loader";
+import React from 'react'
+import { Query } from 'react-apollo'
+import { gql } from 'apollo-boost'
+import { ListOfFavs } from '../components/ListOfFavs'
+import { Loader } from '../components/Loader'
 
 const GET_FAVS = gql`
   query getFavs {
@@ -14,18 +14,18 @@ const GET_FAVS = gql`
       userId
     }
   }
-`;
+`
 
-const renderProp = ({ loading, error, data}) => {
-    if(loading) return <Loader />
-    if(error) return <p>error</p>
-    const {favs = {}} = data
+const renderProp = ({ loading, error, data }) => {
+  if (loading) return <Loader />
+  if (error) return <p>error</p>
+  const { favs = {} } = data
 
-    return <ListOfFavs favs={favs}/>
+  return <ListOfFavs favs={favs} />
 }
 
 export const FavsWithQuery = () => (
-    <Query query={GET_FAVS} fetchPolicy='network-only'>
-        {renderProp}
-    </Query>
+  <Query query={GET_FAVS} fetchPolicy='network-only'>
+    {renderProp}
+  </Query>
 )

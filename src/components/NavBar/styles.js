@@ -1,6 +1,6 @@
 import styled from 'styled-components'
-import {Link as LinkRouter} from '@reach/router'
-import {slideIn2} from '../../styles/animation'
+import { Link as LinkRouter } from '@reach/router'
+import { slideIn2 } from '../../styles/animation'
 
 export const Nav = styled.nav`
     align-items: center;
