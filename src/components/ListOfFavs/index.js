@@ -20,5 +20,5 @@ ListOfFavs.propTypes = {
       id: PropTypes.string,
       src: PropTypes.string
     })
-  ),
+  )
 }

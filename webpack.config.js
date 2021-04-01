@@ -32,18 +32,18 @@ module.exports = {
       ]
     }),
     new WorkboxWebpackPlugin.GenerateSW({
-      runtimeCaching:[
+      runtimeCaching: [
         {
           urlPattern: new RegExp('https://(res.cloudinary.com | images.unsplash.com)'),
           handler: 'CacheFirst',
-          options:{
+          options: {
             cacheName: 'images'
           }
         },
         {
           urlPattern: new RegExp('https://petgram-server-hinval.vercel.app'),
           handler: 'NetworkFirst',
-          options:{
+          options: {
             cacheName: 'api'
           }
         }

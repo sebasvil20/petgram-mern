@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { ErrorDiv } from './styles'
 import { MdErrorOutline } from 'react-icons/md'
 

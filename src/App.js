@@ -1,4 +1,4 @@
-import React, {useContext, Suspense} from 'react'
+import React, { useContext, Suspense } from 'react'
 import { GlobalStyle } from './styles/GlobalStyles'
 import { Logo } from './components/Logo'
 import { NavBar } from './components/NavBar'
@@ -10,22 +10,20 @@ import { NotRegisteredUser } from './pages/NotRegisteredUser'
 
 import { Redirect, Router } from '@reach/router'
 
-import {Context} from './Context'
+import { Context } from './Context'
 import { NotFound } from './pages/NotFound'
-
 
 const Favs = React.lazy(() => import('./pages/Favs'))
 
 export const App = () => {
-
-  const {isAuth} = useContext(Context)
+  const { isAuth } = useContext(Context)
 
   return (
-    <Suspense fallback={<div></div>}>
+    <Suspense fallback={<div />}>
       <GlobalStyle />
       <Logo />
       <Router>
-        <NotFound default/>
+        <NotFound default />
         <Home path='/' />
         <Home path='/pet/:id' />
         <Detail path='/detail/:detailId' />
